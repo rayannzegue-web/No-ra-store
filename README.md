@@ -1,262 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noéra – Timeless Luxury Watches | Cameroon & Beyond</title>
+  <meta name="description" content="Discover timeless elegance with Noéra luxury watches. Authentic, premium timepieces delivered across Cameroon and worldwide."/>
+  
+  <!-- Google Fonts: Elegant serif + sans-serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"/>
+  
+  <style>
+    :root {
+      --bg-dark: #0f0f0f;
+      --text-light: #f5f5f5;
+      --gold: #d4af37;
+      --gray: #888;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    nav a {
+      color: var(--text-light);
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--gold); }
 
-<title>Noéra | Luxury Accessories Store</title>
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1524592094714-0f25c5025c32?auto=format&fit=crop&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 5%;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.5rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+      color: #ddd;
+    }
+    .btn {
+      background: var(--gold);
+      color: black;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background: #fff;
+      transform: translateY(-3px);
+    }
 
-<style>
+    section { padding: 6rem 5%; }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--gold);
+    }
 
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#fff;
-  color:#1f3d2b;
-}
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .product-card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.4s, box-shadow 0.4s;
+      text-align: center;
+    }
+    .product-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 40px rgba(212,175,55,0.15);
+    }
+    .product-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 1.5rem;
+    }
+    .product-info h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-size: 1.3rem;
+      color: var(--gold);
+      margin: 0.5rem 0;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: var(--gray);
+      margin-left: 0.8rem;
+      font-size: 1rem;
+    }
+    .btn-add {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 0.7rem 1.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: all 0.3s;
+    }
+    .btn-add:hover {
+      background: var(--gold);
+      color: black;
+    }
 
-/* HEADER */
-header{
-  background:linear-gradient(to right,#fff,#1f3d2b);
-  padding:50px 20px;
-  text-align:center;
-  color:white;
-}
-
-header h1{
-  font-size:45px;
-  margin:0;
-}
-
-/* NAV */
-nav{
-  background:#1f3d2b;
-  text-align:center;
-  padding:12px;
-}
-
-nav a{
-  color:white;
-  text-decoration:none;
-  margin:0 15px;
-  font-weight:bold;
-}
-
-nav a:hover{
-  text-decoration:underline;
-}
-
-/* SECTIONS */
-section{
-  max-width:1200px;
-  margin:auto;
-  padding:40px 20px;
-}
-
-h2{
-  text-align:center;
-}
-
-/* INFO */
-.info{
-  background:#f0f7f4;
-  padding:20px;
-  border-radius:8px;
-  text-align:center;
-  margin-bottom:30px;
-}
-
-/* PRODUCTS */
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
-
-.product{
-  border:1px dashed #aaa;
-  padding:20px;
-  border-radius:8px;
-  background:#fafafa;
-  text-align:center;
-}
-
-.product img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-  border-radius:6px;
-  background:#ddd;
-}
-
-.placeholder{
-  font-style:italic;
-  color:#666;
-}
-
-/* ABOUT */
-.about{
-  background:#f0f7f4;
-  padding:25px;
-  border-radius:8px;
-}
-
-/* CONTACT */
-.contact{
-  background:#1f3d2b;
-  color:white;
-  text-align:center;
-  padding:40px 20px;
-}
-
-.contact a{
-  color:white;
-  font-weight:bold;
-}
-
-/* FOOTER */
-footer{
-  background:#111;
-  color:white;
-  text-align:center;
-  padding:15px;
-  font-size:14px;
-}
-
-</style>
+    footer {
+      background: #000;
+      padding: 3rem 5% 1.5rem;
+      text-align: center;
+      border-top: 1px solid #333;
+    }
+    .contact-info {
+      margin: 1.5rem 0;
+      font-size: 1.1rem;
+    }
+    .contact-info a {
+      color: var(--gold);
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    .social a { color: white; margin: 0 1rem; font-size: 1.5rem; }
+    .copyright { margin-top: 2rem; color: #666; font-size: 0.9rem; }
+  </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
-<header>
-<h1>Noéra</h1>
-<p>Luxury-Inspired Watches, Shoes & Accessories</p>
-<p>Trusted • Elegant • Affordable</p>
-</header>
+  <header>
+    <a href="#" class="logo">Noéra</a>
+    <nav>
+      <a href="#shop">Shop All</a>
+      <a href="#new">New Arrivals</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<!-- NAV -->
-<nav>
-<a href="#home">Home</a>
-<a href="#shop">Shop</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
+  <section class="hero">
+    <h1>Discover Timeless Elegance</h1>
+    <p>Premium luxury watches crafted with precision. Serving Cameroon and customers worldwide with authenticity guaranteed.</p>
+    <a href="#shop" class="btn">Shop All Watches</a>
+  </section>
 
-<!-- HOME -->
-<section id="home">
+  <section id="new">
+    <h2>New Arrivals</h2>
+    <div class="products-grid">
+      <!-- Replace these with your real products later -->
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?auto=format&fit=crop&q=80&w=800" alt="Elegant Black Watch">
+        <div class="product-info">
+          <h3>Classic Chronograph</h3>
+          <p class="price">XAF 85,000 <span class="old-price">XAF 120,000</span></p>
+          <button class="btn-add">Order via WhatsApp</button>
+        </div>
+      </div>
 
-<h2>Welcome to Noéra</h2>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1523177577-2923e2f37c74?auto=format&fit=crop&q=80&w=800" alt="Gold Luxury Watch">
+        <div class="product-info">
+          <h3>Gold Edition Automatic</h3>
+          <p class="price">XAF 145,000</p>
+          <button class="btn-add">Order via WhatsApp</button>
+        </div>
+      </div>
 
-<div class="info">
-<p>✅ Doorstep Delivery Available</p>
-<p>✅ Store Pickup Available</p>
-<p>📍 Serving Cameroon</p>
-</div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800" alt="Silver Watch">
+        <div class="product-info">
+          <h3>Minimalist Silver</h3>
+          <p class="price">XAF 65,000 <span class="old-price">XAF 95,000</span></p>
+          <button class="btn-add">Order via WhatsApp</button>
+        </div>
+      </div>
 
-<p style="text-align:center;">
-Your trusted store for luxury-looking accessories at affordable prices.
-Shop with confidence and enjoy quality service.
-</p>
+      <!-- Add more cards as needed -->
+    </div>
+  </section>
 
-</section>
-
-<!-- SHOP -->
-<section id="shop">
-
-<h2>Our Products</h2>
-
-<div class="products">
-
-<!-- EMPTY SLOT 1 -->
-<div class="product">
-<img src="" alt="">
-<p class="placeholder">Product image coming soon</p>
-<p class="placeholder">Product name</p>
-</div>
-
-<!-- EMPTY SLOT 2 -->
-<div class="product">
-<img src="" alt="">
-<p class="placeholder">Product image coming soon</p>
-<p class="placeholder">Product name</p>
-</div>
-
-<!-- EMPTY SLOT 3 -->
-<div class="product">
-<img src="" alt="">
-<p class="placeholder">Product image coming soon</p>
-<p class="placeholder">Product name</p>
-</div>
-
-<!-- EMPTY SLOT 4 -->
-<div class="product">
-<img src="" alt="">
-<p class="placeholder">Product image coming soon</p>
-<p class="placeholder">Product name</p>
-</div>
-
-<!-- EMPTY SLOT 5 -->
-<div class="product">
-<img src="" alt="">
-<p class="placeholder">Product image coming soon</p>
-<p class="placeholder">Product name</p>
-</div>
-
-<!-- EMPTY SLOT 6 -->
-<div class="product">
-<img src="" alt="">
-<p class="placeholder">Product image coming soon</p>
-<p class="placeholder">Product name</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-
-<h2>About Noéra</h2>
-
-<div class="about">
-
-<p>
-Noéra is a fashion accessories brand offering luxury-inspired watches,
-shoes, chains, handbags, and premium accessories.
-</p>
-
-<p>
-We focus on quality, trust, and customer satisfaction.
-We also provide doorstep delivery and pickup services.
-</p>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-
-<h2>Contact Us</h2>
-
-<p>📧 Email: djinabrightly25@gmail.com</p>
-<p>📞 Phone / WhatsApp: +237 653 211 150</p>
-
-<p>📸 Instagram:
-<a href="https://instagram.com/yourpage" target="_blank">
-@yourpage
-</a>
-</p>
-
-<p>Fast Reply • Trusted Seller • Secure Orders</p>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-© 2026 Noéra. All Rights Reserved.
-</footer>
+  <footer id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:djinabrightly25@gmail.com">djinabrightly25@gmail.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/237650589292" target="_blank">+237 650 589 292</a> (Click to chat directly)</p>
+      <p>We serve Cameroon and international customers with fast, secure delivery.</p>
+    </div>
+    <div class="copyright">
+      © 2026 Noéra – All Rights Reserved.
+    </div>
+  </footer>
 
 </body>
 </html>
